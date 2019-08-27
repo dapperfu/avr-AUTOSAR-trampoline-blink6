@@ -1,4 +1,3 @@
-
 OIL_VERSION = "2.5" : "test" ;
 
 CPU test {
@@ -29,16 +28,16 @@ CPU test {
     };
     AUTOSTART = TRUE {
       ALARMTIME = 5000;
-      CYCLETIME = 10;
+      CYCLETIME = 100;
       APPMODE = stdAppmode;
     };
   };
   TASK blinkTaskPin8 {
-    PRIORITY = 5000;
+    PRIORITY = 20;
     AUTOSTART = FALSE;
     ACTIVATION = 1;
     SCHEDULE = FULL;
-    STACKSIZE = 256;
+    STACKSIZE = 128;
   };
 
   ALARM blinkTaskPin9Alarm {
@@ -48,16 +47,16 @@ CPU test {
     };
     AUTOSTART = TRUE {
       ALARMTIME = 5000;
-      CYCLETIME = 20;
+      CYCLETIME = 200;
       APPMODE = stdAppmode;
     };
   };
   TASK blinkTaskPin9 {
-    PRIORITY = 5000;
+    PRIORITY = 20;
     AUTOSTART = FALSE;
     ACTIVATION = 1;
     SCHEDULE = FULL;
-    STACKSIZE = 256;
+    STACKSIZE = 128;
   };
 
   ALARM blinkTaskPin10Alarm {
@@ -67,16 +66,16 @@ CPU test {
     };
     AUTOSTART = TRUE {
       ALARMTIME = 5000;
-      CYCLETIME = 40;
+      CYCLETIME = 400;
       APPMODE = stdAppmode;
     };
   };
   TASK blinkTaskPin10 {
-    PRIORITY = 5000;
+    PRIORITY = 20;
     AUTOSTART = FALSE;
     ACTIVATION = 1;
     SCHEDULE = FULL;
-    STACKSIZE = 256;
+    STACKSIZE = 128;
   };
 
   ALARM blinkTaskPin11Alarm {
@@ -86,16 +85,16 @@ CPU test {
     };
     AUTOSTART = TRUE {
       ALARMTIME = 5000;
-      CYCLETIME = 80;
+      CYCLETIME = 800;
       APPMODE = stdAppmode;
     };
   };
   TASK blinkTaskPin11 {
-    PRIORITY = 5000;
+    PRIORITY = 20;
     AUTOSTART = FALSE;
     ACTIVATION = 1;
     SCHEDULE = FULL;
-    STACKSIZE = 256;
+    STACKSIZE = 128;
   };
 
   ALARM blinkTaskPin12Alarm {
@@ -105,16 +104,16 @@ CPU test {
     };
     AUTOSTART = TRUE {
       ALARMTIME = 5000;
-      CYCLETIME = 160;
+      CYCLETIME = 1600;
       APPMODE = stdAppmode;
     };
   };
   TASK blinkTaskPin12 {
-    PRIORITY = 5000;
+    PRIORITY = 20;
     AUTOSTART = FALSE;
     ACTIVATION = 1;
     SCHEDULE = FULL;
-    STACKSIZE = 256;
+    STACKSIZE = 128;
   };
 
   ALARM blinkTaskPin13Alarm {
@@ -124,16 +123,16 @@ CPU test {
     };
     AUTOSTART = TRUE {
       ALARMTIME = 5000;
-      CYCLETIME = 320;
+      CYCLETIME = 3200;
       APPMODE = stdAppmode;
     };
   };
   TASK blinkTaskPin13 {
-    PRIORITY = 5000;
+    PRIORITY = 20;
     AUTOSTART = FALSE;
     ACTIVATION = 1;
     SCHEDULE = FULL;
-    STACKSIZE = 256;
+    STACKSIZE = 128;
   };
 
 
