@@ -1,0 +1,19 @@
+#include "Arduino.h"
+#undef ISR // remove the avr-gcc ISR version
+extern "C" {
+#include "tpl_app_config.h"
+#include "tpl_os.h" //set the OSEK ISR version.
+}
+
+void setup() {
+{% for task in tasks %}
+  pinMode({{ task.pin }}, OUTPUT);
+{%- endfor %}
+}
+
+{% for task in tasks %}
+TASK({{ task.name }}) {
+  static {{ task.c_type }} nb = 0;
+  digitalWrite({{ task.pin }}, nb++ & 0x01);
+}
+{% endfor %}

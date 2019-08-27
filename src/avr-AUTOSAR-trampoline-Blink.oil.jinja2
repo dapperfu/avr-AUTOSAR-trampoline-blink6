@@ -1,0 +1,44 @@
+OIL_VERSION = "2.5" : "test" ;
+
+CPU test {
+  OS config {
+    STATUS = STANDARD;
+    BUILD = TRUE {
+      TRAMPOLINE_BASE_PATH = "../trampoline";
+      APP_NAME = "avr-AUTOSAR-trampoline-Blink.elf";
+      APP_SRC = "avr-AUTOSAR-trampoline-Blink.cpp";
+      CPPCOMPILER = "avr-g++";
+      COMPILER = "avr-gcc";
+      LINKER = "avr-gcc";
+      ASSEMBLER = "avr-gcc";
+      COPIER = "avr-objcopy";
+      SYSTEM = PYTHON;
+      LIBRARY = serial;
+    };
+    SYSTEM_CALL = TRUE;
+  };
+
+  APPMODE stdAppmode {};
+
+{% for task in tasks %}
+  ALARM {{ task.name }}Alarm {
+    COUNTER= SystemCounter;
+    ACTION = ACTIVATETASK {
+      TASK = {{ task.name }};
+    };
+    AUTOSTART = TRUE {
+      ALARMTIME = {{ task.alarmtime }};
+      CYCLETIME = {{ task.cycletime }};
+      APPMODE = stdAppmode;
+    };
+  };
+  TASK {{ task.name }} {
+    PRIORITY = {{ task.priority }};
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = {{ task.stacksize }};
+  };
+{% endfor %}
+
+};
