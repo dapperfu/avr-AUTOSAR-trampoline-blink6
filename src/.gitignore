@@ -4,3 +4,4 @@
 *.hex
 build
 avr-AUTOSAR-trampoline-Blink
+.ipynb_checkpoints/

@@ -1,3 +1,4 @@
+
 OIL_VERSION = "2.5" : "test" ;
 
 CPU test {
@@ -20,120 +21,120 @@ CPU test {
 
   APPMODE stdAppmode {};
 
-  ALARM periodic1 {
+
+  ALARM blinkTaskPin8Alarm {
     COUNTER= SystemCounter;
     ACTION = ACTIVATETASK {
       TASK = blinkTaskPin8;
     };
     AUTOSTART = TRUE {
-      ALARMTIME = 5000; // activated each 1024 ms
-      CYCLETIME = 10; // activated each 1024 ms
+      ALARMTIME = 5000;
+      CYCLETIME = 10;
       APPMODE = stdAppmode;
     };
   };
+  TASK blinkTaskPin8 {
+    PRIORITY = 5000;
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 256;
+  };
 
-  ALARM periodic2 {
+  ALARM blinkTaskPin9Alarm {
     COUNTER= SystemCounter;
     ACTION = ACTIVATETASK {
       TASK = blinkTaskPin9;
     };
     AUTOSTART = TRUE {
-      ALARMTIME = 5000; // activated each 1024 ms
-      CYCLETIME = 50; // activated each 1024 ms
+      ALARMTIME = 5000;
+      CYCLETIME = 20;
       APPMODE = stdAppmode;
     };
   };
-  ALARM periodic3 {
+  TASK blinkTaskPin9 {
+    PRIORITY = 5000;
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 256;
+  };
+
+  ALARM blinkTaskPin10Alarm {
     COUNTER= SystemCounter;
     ACTION = ACTIVATETASK {
       TASK = blinkTaskPin10;
     };
     AUTOSTART = TRUE {
-      ALARMTIME = 5000; // activated each 1024 ms
-      CYCLETIME = 100; // activated each 1024 ms
+      ALARMTIME = 5000;
+      CYCLETIME = 40;
       APPMODE = stdAppmode;
     };
   };
-  ALARM periodic4 {
+  TASK blinkTaskPin10 {
+    PRIORITY = 5000;
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 256;
+  };
+
+  ALARM blinkTaskPin11Alarm {
     COUNTER= SystemCounter;
     ACTION = ACTIVATETASK {
       TASK = blinkTaskPin11;
     };
     AUTOSTART = TRUE {
-      ALARMTIME = 5000; // activated each 1024 ms
-      CYCLETIME = 200; // activated each 1024 ms
+      ALARMTIME = 5000;
+      CYCLETIME = 80;
       APPMODE = stdAppmode;
     };
   };
+  TASK blinkTaskPin11 {
+    PRIORITY = 5000;
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 256;
+  };
 
-  ALARM periodic5 {
+  ALARM blinkTaskPin12Alarm {
     COUNTER= SystemCounter;
     ACTION = ACTIVATETASK {
       TASK = blinkTaskPin12;
     };
     AUTOSTART = TRUE {
-      ALARMTIME = 5000; // activated each 1024 ms
-      CYCLETIME = 400; // activated each 1024 ms
+      ALARMTIME = 5000;
+      CYCLETIME = 160;
       APPMODE = stdAppmode;
     };
   };
+  TASK blinkTaskPin12 {
+    PRIORITY = 5000;
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 256;
+  };
 
-  ALARM periodic6 {
+  ALARM blinkTaskPin13Alarm {
     COUNTER= SystemCounter;
     ACTION = ACTIVATETASK {
       TASK = blinkTaskPin13;
     };
     AUTOSTART = TRUE {
-      ALARMTIME = 5000; // activated each 1024 ms
-      CYCLETIME = 500; // activated each 1024 ms
+      ALARMTIME = 5000;
+      CYCLETIME = 320;
       APPMODE = stdAppmode;
     };
   };
-
-  TASK blinkTaskPin8 {
-    PRIORITY = 5;
+  TASK blinkTaskPin13 {
+    PRIORITY = 5000;
     AUTOSTART = FALSE;
     ACTIVATION = 1;
     SCHEDULE = FULL;
-    STACKSIZE = 128;
+    STACKSIZE = 256;
   };
 
-  TASK blinkTaskPin9 {
-    PRIORITY = 15;
-    AUTOSTART = FALSE;
-    ACTIVATION = 1;
-    SCHEDULE = FULL;
-    STACKSIZE = 128;
-  };
-
-  TASK blinkTaskPin10 {
-    PRIORITY = 25;
-    AUTOSTART = FALSE;
-    ACTIVATION = 1;
-    SCHEDULE = FULL;
-    STACKSIZE = 128;
-  };
-
-  TASK blinkTaskPin11 {
-    PRIORITY = 30;
-    AUTOSTART = FALSE;
-    ACTIVATION = 1;
-    SCHEDULE = FULL;
-    STACKSIZE = 128;
-  };
-  TASK blinkTaskPin12{
-    PRIORITY = 35;
-    AUTOSTART = FALSE;
-    ACTIVATION = 1;
-    SCHEDULE = FULL;
-    STACKSIZE = 128;
-  };
-  TASK blinkTaskPin13{
-    PRIORITY = 35;
-    AUTOSTART = FALSE;
-    ACTIVATION = 1;
-    SCHEDULE = FULL;
-    STACKSIZE = 128;
-  };
 
 };

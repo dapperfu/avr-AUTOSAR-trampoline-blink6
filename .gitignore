@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+bin/
+goil
+lib/
+lib64
+pyvenv.cfg
+share/
