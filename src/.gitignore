@@ -1,0 +1,6 @@
+*.py
+*.size
+*.elf
+*.hex
+build
+avr-AUTOSAR-trampoline-Blink
